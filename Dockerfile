@@ -31,4 +31,6 @@ COPY backend/src ./src
 # Copy our frontend build result
 COPY --from=builder /usr/src/app/build build
 
+ENV NODE_OPTIONS "--trace-warnings"
+
 CMD [ "npm", "start" ]

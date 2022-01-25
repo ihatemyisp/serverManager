@@ -93,6 +93,7 @@ async function updateServers() {
 		let config = servers[i]
 		config.sensordataRaw = await getSensors(config)
 		// Transform sensor data into easier to use format
+		console.log(config.sensordataRaw)
 		config.sensordata = config.sensordataRaw.map((sensor, i) => {
 			return {
 				name: sensor[0],
